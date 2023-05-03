@@ -12,6 +12,35 @@ app.use(express.urlencoded({extended: true}));
 // static specifies the default location if no route is specified in this case it's the public directory
 app.use(express.static('public'));
 
+app.delete("/api/notes/:id", (res,req) => {
+    // read the data base file
+    fs.readFile(databasePath, 'utf-8', (err, data) => {
+        // throw an error if there is one
+        if (err) console.error(err)
+        else{
+            // parse to json everything in the database file currently
+            const db = JSON.parse(data);
+            
+            // make new array for the new file excluding the deleted object
+            var newDB = [];
+            
+            // loop through the database
+            for(i=0; i < db.length ; i++){
+                // if the id of the current note is not the same as the id sent
+                // add the note to the new id
+                if(db[i].id !== req.id){
+                    newDB.push(db[i]);
+                }
+            }
+
+            // write to db.json again with the new array
+
+        }
+    })
+})
+
+
+
 app.get('/notes', (req,res) => {
     // when the get notes button is clicked the browser is told through the html to look for a (/notes) through href
     // express lookes through the gets and if ther is one with (/notes) it connects it to the backend which is written here
@@ -48,8 +77,7 @@ app.post("/api/notes", (req,res) => {
             // also send the status code if there is no error
             fs.writeFile(databasePath,JSON.stringify(db, null, '\t'), (err) =>{
                 if (err) console.error(err); 
-                else
-                {
+                else{
                     const response = {status: "success", body: newObject}
                     res.status(201).json(response);
                 }
