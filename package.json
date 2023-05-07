@@ -1,14 +1,21 @@
 {
-  "name": "note-taker",
+  "name": "Note-Taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Note taking app.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "note taker"
+  ],
+  "author": "Joseph Teklu",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "fs": "^0.0.1-security"
+  },
+  "engines": {
+    "node": "10.x"
   }
 }
