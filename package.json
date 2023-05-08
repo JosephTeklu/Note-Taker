@@ -7,15 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "note taker"
+    "notetaker"
   ],
   "author": "Joseph Teklu",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "fs": "^0.0.1-security"
   },
   "engines": {
-    "node": "10.x"
+    "node": "18.x"
   }
 }
