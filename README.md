@@ -10,7 +10,7 @@
  - [Questions](#questions) 
  - [License](#license)
 ## Installation 
-  Clone the repo onto your computer. Inside of the directory run (npm i) to install the necessary dependicies then  (npm start). The program will then run from your machine on http://localhost:3001. Another alternative to running this program is to head to the link () where the program runs on Heroku.
+  Clone the repo onto your computer. Inside of the directory run (npm i) to install the necessary dependicies then  (npm start). The program will then run from your machine on http://localhost:3001. Another alternative to running this program is to head to the link (https://secret-fortress-47602.herokuapp.com/notes) where the program runs on Heroku.
 ## Usage 
   This could be used as a simple to do reminder or personal note taking app. I really dont see the commercial aspect of it but it does serve the purpose of holding information of what you desire personally from anywhere in the world that you can access.
 ## Contributing 
