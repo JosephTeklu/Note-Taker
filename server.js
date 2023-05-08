@@ -6,7 +6,7 @@ const fs = require('fs');
 const databasePath = "./db/db.json"
 // open up express and setup port
 const app = express();
-const PORT = proccess.env.PORT||3001;
+const PORT = process.env.PORT||3001;
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
